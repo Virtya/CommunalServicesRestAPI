@@ -22,4 +22,7 @@ public class Individual {
 
     @NotNull
     private String gender;
+
+    @NotNull
+    private Long birthDate;
 }

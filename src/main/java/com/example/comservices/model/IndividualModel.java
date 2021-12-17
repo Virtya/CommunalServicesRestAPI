@@ -12,4 +12,7 @@ public class IndividualModel {
 
     @JsonProperty(value = "gender")
     private String gender;
+
+    @JsonProperty(value = "birthDate")
+    private String birthDate;
 }
