@@ -36,6 +36,9 @@
                 <constraints nullable="false"/>
             </column>
 
+            <column name="birth_date" type="nvarchar2(50)">
+                <constraints nullable="false"/>
+            </column>
         </createTable>
 
 
@@ -53,6 +56,13 @@
                 <constraints nullable="false" />
             </column>
 
+            <column name="region" type="nvarchar2(50)">
+                <constraints nullable="false"/>
+            </column>
+
+            <column name="federal_law" type="nvarchar2(50)">
+                <constraints nullable="false"/>
+            </column>
         </createTable>
 
 

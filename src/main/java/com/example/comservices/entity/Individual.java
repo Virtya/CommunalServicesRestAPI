@@ -24,5 +24,5 @@ public class Individual {
     private String gender;
 
     @NotNull
-    private Long birthDate;
+    private String birthDate;
 }
