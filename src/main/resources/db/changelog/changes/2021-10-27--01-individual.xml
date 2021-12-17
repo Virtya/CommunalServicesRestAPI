@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                            http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.4.xsd">
+
+    <changeSet id="2" author="zheltikov" runOnChange="true">
+        <preConditions onFail="MARK_RAN">
+            <tableIsEmpty tableName="individual"/>
+        </preConditions>
+        <insert tableName = "individual">
+            <column name = "number" >1</column>
+            <column name = "gender" >М</column>
+            <column name="fio" >Козловский Д. П.</column>
+        </insert>
+
+        <insert tableName = "individual">
+            <column name = "number" >2</column>
+            <column name = "gender" > Ж </column>
+            <column name="fio" > Авилова Н. Д. </column>
+        </insert>
+
+        <insert tableName = "individual">
+            <column name = "number" > 3 </column>
+            <column name = "gender" > М </column>
+            <column name="fio" > Калинкин М. П. </column>
+        </insert>
+    </changeSet>
+</databaseChangeLog>

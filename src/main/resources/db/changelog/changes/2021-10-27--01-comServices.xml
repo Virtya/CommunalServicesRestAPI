@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                            http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.4.xsd">
+
+    <changeSet id="1" author="zheltikov" runOnChange="true">
+        <preConditions onFail="MARK_RAN">
+            <and>
+                <not>
+                    <tableExists tableName="contract"/>
+                </not>
+                <not>
+                    <tableExists tableName="individual"/>
+                </not>
+                <not>
+                    <tableExists tableName="indebtedness"/>
+                </not>
+            </and>
+        </preConditions>
+
+
+        <createTable tableName="individual">
+
+            <column name="number" type="bigint" autoIncrement="true">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+
+            <column name="fio" type="nvarchar2(50)">
+                <constraints nullable="false"/>
+            </column>
+
+            <column name="gender" type="nvarchar2(10)">
+                <constraints nullable="false"/>
+            </column>
+
+        </createTable>
+
+
+        <createTable tableName="contract">
+
+            <column name="contract_id" type="bigint" autoIncrement="true">
+                <constraints primaryKey="true" nullable="false" />
+            </column>
+
+            <column name="number" type="bigint" >
+                <constraints nullable="false" />
+            </column>
+
+            <column name="validity" type="bigint" >
+                <constraints nullable="false" />
+            </column>
+
+        </createTable>
+
+
+        <createTable tableName="indebtedness">
+
+            <column name="id" type="bigint" autoIncrement="true">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+
+            <column name="number" type="bigint">
+                <constraints nullable="false"/>
+            </column>
+
+            <column name="sum" type="bigint">
+                <constraints nullable="false"/>
+            </column>
+
+        </createTable>
+
+
+        <addForeignKeyConstraint baseTableName="contract"
+                                 baseColumnNames="number"
+                                 constraintName="fk_contract_number"
+                                 referencedTableName="individual"
+                                 referencedColumnNames="number"/>
+
+        <addForeignKeyConstraint baseTableName="indebtedness"
+                                 baseColumnNames="number"
+                                 constraintName="fk_indebtedness_number"
+                                 referencedTableName="individual"
+                                 referencedColumnNames="number"/>
+
+        <rollback>
+            <dropForeignKeyConstraint baseTableName="contract" constraintName="fk_contract_number"/>
+            <dropForeignKeyConstraint baseTableName="indebtedness" constraintName="fk_indebtedness_number"/>
+            <dropTable tableName="contract"/>
+            <dropTable tableName="individual"/>
+            <dropTable tableName="indebtedness"/>
+        </rollback>
+    </changeSet>
+</databaseChangeLog>
