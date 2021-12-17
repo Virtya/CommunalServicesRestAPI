@@ -1,4 +1,4 @@
-package com.example.comservices.exeption;
+package com.example.comservices.exception;
 
 public class ResourceAlreadyExistsException extends RuntimeException{
     public ResourceAlreadyExistsException() {

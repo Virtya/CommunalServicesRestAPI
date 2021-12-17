@@ -14,4 +14,9 @@ public class ContractModel {
     @JsonProperty(value = "validity")
     private Long validity;
 
+    @JsonProperty(value = "region")
+    private Long region;
+
+    @JsonProperty(value = "federal law")
+    private Long federalLaw;
 }

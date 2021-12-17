@@ -1,10 +1,7 @@
 package com.example.comservices.entity;
 
 import com.sun.istack.NotNull;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.RequiredArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 import javax.persistence.*;
 
@@ -13,6 +10,7 @@ import javax.persistence.*;
 @Entity
 @RequiredArgsConstructor
 @AllArgsConstructor
+@Builder
 
 public class Individual {
     @Id
@@ -20,8 +18,8 @@ public class Individual {
     private Long number;
 
     @NotNull
-    private String gender;
+    private String fio;
 
     @NotNull
-    private String fio;
+    private String gender;
 }

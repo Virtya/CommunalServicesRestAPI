@@ -27,4 +27,10 @@ public class Contract {
 
     @NotNull
     private Long validity;
+
+    @NotNull
+    private String region;
+
+    @NotNull
+    private String federalLaw;
 }

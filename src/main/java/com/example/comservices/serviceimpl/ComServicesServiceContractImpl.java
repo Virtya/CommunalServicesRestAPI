@@ -2,8 +2,7 @@ package com.example.comservices.serviceimpl;
 
 import com.example.comservices.entity.Contract;
 import com.example.comservices.entity.Individual;
-import com.example.comservices.exeption.ResourceAlreadyExistsException;
-import com.example.comservices.exeption.ResourceNotFoundException;
+import com.example.comservices.exception.ResourceNotFoundException;
 import com.example.comservices.model.ContractModel;
 import com.example.comservices.repository.ContractRepository;
 import com.example.comservices.repository.IndividualRepository;
@@ -35,9 +34,6 @@ public class ComServicesServiceContractImpl implements ComServicesServiceContrac
         Individual individual = individualRepository.findByNumber(contractModel.getNumber())
                 .orElseThrow(()->new ResourceNotFoundException(
                         "The individual with number = "+contractModel.getNumber()+" does not exist." ));
-        /*if (contractRepository.existsByIndividual(individual)){
-            throw new ResourceAlreadyExistsException("The contract with such individual and id already exist.");
-        }*/
         Contract contract = Contract.builder()
                         .individual(individual)
                         .validity(contractModel.getValidity())

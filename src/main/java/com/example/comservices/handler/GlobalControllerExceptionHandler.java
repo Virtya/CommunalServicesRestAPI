@@ -2,12 +2,9 @@ package com.example.comservices.handler;
 
 
 import com.example.comservices.dto.ErrorDto;
-import com.example.comservices.exeption.ResourceAlreadyExistsException;
-import com.example.comservices.exeption.ResourceNotFoundException;
+import com.example.comservices.exception.ResourceAlreadyExistsException;
+import com.example.comservices.exception.ResourceNotFoundException;
 
-import com.example.comservices.dto.ErrorDto;
-import com.example.comservices.exeption.ResourceAlreadyExistsException;
-import com.example.comservices.exeption.ResourceNotFoundException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ControllerAdvice;
