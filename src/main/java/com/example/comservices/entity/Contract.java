@@ -11,7 +11,6 @@ import javax.persistence.*;
 @RequiredArgsConstructor
 @AllArgsConstructor
 @Builder
-/*@Table(name = "contract")*/
 
 public class Contract {
 

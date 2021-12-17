@@ -1,8 +1,6 @@
 package com.example.comservices.service;
 
-import com.example.comservices.entity.Contract;
 import com.example.comservices.entity.Individual;
-import com.example.comservices.model.ContractModel;
 import com.example.comservices.model.IndividualModel;
 
 import java.util.List;
