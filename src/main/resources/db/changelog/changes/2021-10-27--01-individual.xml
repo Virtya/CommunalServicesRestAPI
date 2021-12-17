@@ -14,18 +14,21 @@
             <column name = "number" >1</column>
             <column name = "gender" >М</column>
             <column name="fio" >Козловский Д. П.</column>
+            <column name="birth_date" >11.12.2001</column>
         </insert>
 
         <insert tableName = "individual">
             <column name = "number" >2</column>
             <column name = "gender" > Ж </column>
             <column name="fio" > Авилова Н. Д. </column>
+            <column name="birth_date" >10.12.2001</column>
         </insert>
 
         <insert tableName = "individual">
             <column name = "number" > 3 </column>
             <column name = "gender" > М </column>
             <column name="fio" > Калинкин М. П. </column>
+            <column name="birth_date" >11.11.1998</column>
         </insert>
     </changeSet>
 </databaseChangeLog>
