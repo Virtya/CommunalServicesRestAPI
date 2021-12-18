@@ -14,5 +14,5 @@ public class IndividualModel {
     private String gender;
 
     @JsonProperty(value = "birth_date")
-    private String birthDate;
+    private String birth_date;
 }
