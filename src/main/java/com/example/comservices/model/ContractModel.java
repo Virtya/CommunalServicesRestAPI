@@ -12,11 +12,11 @@ public class ContractModel {
     private Long number;
 
     @JsonProperty(value = "validity")
-    private Long validity;
+    private String validity;
 
     @JsonProperty(value = "region")
-    private Long region;
+    private String region;
 
     @JsonProperty(value = "federal_law")
-    private Long federalLaw;
+    private String federalLaw;
 }

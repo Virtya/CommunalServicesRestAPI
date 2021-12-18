@@ -52,7 +52,7 @@
                 <constraints nullable="false" />
             </column>
 
-            <column name="validity" type="bigint" >
+            <column name="validity" type="nvarchar2(50)" >
                 <constraints nullable="false" />
             </column>
 

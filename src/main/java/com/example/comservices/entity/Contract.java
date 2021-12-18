@@ -25,7 +25,7 @@ public class Contract {
     private Individual individual;
 
     @NotNull
-    private Long validity;
+    private String validity;
 
     @NotNull
     private String region;
