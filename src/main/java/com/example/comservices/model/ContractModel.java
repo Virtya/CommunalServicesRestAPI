@@ -18,5 +18,5 @@ public class ContractModel {
     private String region;
 
     @JsonProperty(value = "federal_law")
-    private String federalLaw;
+    private String federal_law;
 }

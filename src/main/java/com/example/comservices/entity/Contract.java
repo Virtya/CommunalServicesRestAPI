@@ -31,5 +31,5 @@ public class Contract {
     private String region;
 
     @NotNull
-    private String federalLaw;
+    private String federal_law;
 }
