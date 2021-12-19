@@ -37,6 +37,8 @@ public class ComServicesServiceContractImpl implements ComServicesServiceContrac
         Contract contract = Contract.builder()
                         .individual(individual)
                         .validity(contractModel.getValidity())
+                        .region(contractModel.getRegion())
+                        .federal_law(contractModel.getFederal_law())
                         .build();
         contractRepository.save(contract);
         return contract;
@@ -51,6 +53,8 @@ public class ComServicesServiceContractImpl implements ComServicesServiceContrac
         Contract contract = contractRepository.findById(id).orElseThrow(()->new ResourceNotFoundException("The contract with id="+ id +" does not exist."));
         contract.setIndividual(individual);
         contract.setValidity(contractModel.getValidity());
+        contract.setRegion(contractModel.getRegion());
+        contract.setFederal_law(contractModel.getFederal_law());
         contractRepository.save(contract);
         return contract;
     }

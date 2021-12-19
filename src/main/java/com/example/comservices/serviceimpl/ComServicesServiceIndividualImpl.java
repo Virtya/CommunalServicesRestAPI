@@ -34,6 +34,7 @@ public class ComServicesServiceIndividualImpl implements ComServicesServiceIndiv
         Individual individual =  Individual.builder()
                 .fio(individualModel.getFio())
                 .gender(individualModel.getGender())
+                .birth_date(individualModel.getBirth_date())
                 .build();
         individualRepository.save(individual);
         return individual;
@@ -45,6 +46,7 @@ public class ComServicesServiceIndividualImpl implements ComServicesServiceIndiv
                 "The individual with id="+ id +" does not exist."));
         individual.setFio(individualModel.getFio());
         individual.setGender(individualModel.getGender());
+        individual.setBirth_date(individualModel.getBirth_date());
         individualRepository.save(individual);
         return individual;
     }
