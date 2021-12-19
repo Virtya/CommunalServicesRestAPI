@@ -16,7 +16,6 @@ public class Contract {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "contract_id")
     private Long id;
 
     @NotNull
