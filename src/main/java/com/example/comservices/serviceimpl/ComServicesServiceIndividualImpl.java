@@ -1,13 +1,9 @@
 package com.example.comservices.serviceimpl;
 
-import com.example.comservices.entity.Indebtedness;
 import com.example.comservices.entity.Individual;
 import com.example.comservices.exception.ResourceNotFoundException;
-import com.example.comservices.model.IndebtednessModel;
 import com.example.comservices.model.IndividualModel;
-import com.example.comservices.repository.IndebtednessRepository;
 import com.example.comservices.repository.IndividualRepository;
-import com.example.comservices.service.ComServicesServiceIndebtedness;
 import com.example.comservices.service.ComServicesServiceIndividual;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;

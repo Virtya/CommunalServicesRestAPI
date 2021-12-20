@@ -6,5 +6,5 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import java.util.Optional;
 
 public interface IndividualRepository extends JpaRepository<Individual,Long> {
-    Optional<Individual> findByNumber(Long number);
+    Optional<Individual> findById(Long id);
 }
