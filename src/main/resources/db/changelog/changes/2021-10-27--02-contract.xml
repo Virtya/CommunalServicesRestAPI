@@ -14,7 +14,7 @@
             <column name = "number" >1</column>
             <column name="validity" >21.12.2022</column>
             <column name="region" >Коминтерновский р-он</column>
-            <column name="federal_law" >О государственной защите потерпевших уголовного судопроизводства</column>
+            <column name="federal_law" >1337-Ф13</column>
         </insert>
 
         <insert tableName = "contract">
