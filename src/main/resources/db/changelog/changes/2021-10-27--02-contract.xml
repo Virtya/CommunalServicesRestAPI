@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                            http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.4.xsd">
+
+    <changeSet id="4" author="zheltikov" runOnChange="true">
+        <preConditions onFail="MARK_RAN">
+            <tableIsEmpty tableName="contract"/>
+        </preConditions>
+        <insert tableName = "contract">
+            <column name = "number" >1</column>
+            <column name="validity" >21.12.2022</column>
+            <column name="region" >Коминтерновский р-он</column>
+            <column name="federal_law" >О государственной защите потерпевших уголовного судопроизводства</column>
+        </insert>
+
+        <insert tableName = "contract">
+            <column name = "number" > 2 </column>
+            <column name="validity" > 13.04.2022 </column>
+            <column name="region" >Левобережный р-он</column>
+            <column name="federal_law" >223-ФЗ</column>
+        </insert>
+
+        <insert tableName = "indebtedness">
+            <column name = "number" > 3 </column>
+            <column name="validity" > 11.06.2022 </column>
+            <column name="region" >Юго-западный р-он</column>
+            <column name="federal_law" >228-Ф14</column>
+        </insert>
+    </changeSet>
+</databaseChangeLog>
