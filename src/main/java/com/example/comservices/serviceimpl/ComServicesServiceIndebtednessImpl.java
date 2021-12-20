@@ -34,7 +34,7 @@ public class ComServicesServiceIndebtednessImpl implements ComServicesServiceInd
                 .orElseThrow(()->new ResourceNotFoundException(
                         "The individual with number = "+indebtednessModel.getNumber()+" does not exist." ));
         Indebtedness indebtedness =  Indebtedness.builder()
-                .individual(individual)
+                .number(indebtednessModel.getNumber())
                 .sum(indebtednessModel.getSum())
                 .build();
         indebtednessRepository.save(indebtedness);
@@ -49,7 +49,7 @@ public class ComServicesServiceIndebtednessImpl implements ComServicesServiceInd
 
         Indebtedness indebtedness = indebtednessRepository.findById(id).orElseThrow(()->new ResourceNotFoundException(
                 "The indebtedness with id="+ id +" does not exist."));
-        indebtedness.setIndividual(individual);
+        indebtedness.setNumber(indebtednessModel.getNumber());
         indebtedness.setSum(indebtednessModel.getSum());
         indebtednessRepository.save(indebtedness);
         return indebtedness;

@@ -20,8 +20,7 @@ public class Contract {
 
     @NotNull
     @JoinColumn(name = "number")
-    @ManyToOne
-    private Individual individual;
+    private Long number;
 
     @NotNull
     private String validity;

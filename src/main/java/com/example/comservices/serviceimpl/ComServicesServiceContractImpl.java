@@ -35,7 +35,7 @@ public class ComServicesServiceContractImpl implements ComServicesServiceContrac
                 .orElseThrow(()->new ResourceNotFoundException(
                         "The individual with number = "+contractModel.getNumber()+" does not exist." ));
         Contract contract = Contract.builder()
-                        .individual(individual)
+                        .number(contractModel.getNumber())
                         .validity(contractModel.getValidity())
                         .region(contractModel.getRegion())
                         .federal_law(contractModel.getFederal_law())
@@ -51,7 +51,7 @@ public class ComServicesServiceContractImpl implements ComServicesServiceContrac
                 .orElseThrow(()->new ResourceNotFoundException(
                         "The individual with number = "+contractModel.getNumber()+" does not exist." ));
         Contract contract = contractRepository.findById(id).orElseThrow(()->new ResourceNotFoundException("The contract with id="+ id +" does not exist."));
-        contract.setIndividual(individual);
+        contract.setNumber(contractModel.getNumber());
         contract.setValidity(contractModel.getValidity());
         contract.setRegion(contractModel.getRegion());
         contract.setFederal_law(contractModel.getFederal_law());
