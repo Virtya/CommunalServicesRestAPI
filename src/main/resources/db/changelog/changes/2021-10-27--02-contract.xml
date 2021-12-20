@@ -13,21 +13,21 @@
         <insert tableName = "contract">
             <column name = "number" >1</column>
             <column name="validity" >21.12.2022</column>
-            <column name="region" >Коминтерновский р-он</column>
+            <column name="region" >Коминтерновский район</column>
             <column name="federal_law" >1337-Ф13</column>
         </insert>
 
         <insert tableName = "contract">
             <column name = "number" > 2 </column>
             <column name="validity" > 13.04.2022 </column>
-            <column name="region" >Левобережный р-он</column>
+            <column name="region" >Левобережный район</column>
             <column name="federal_law" >223-ФЗ</column>
         </insert>
 
         <insert tableName = "contract">
             <column name = "number" > 3 </column>
             <column name="validity" > 11.06.2022 </column>
-            <column name="region" >Юго-западный р-он</column>
+            <column name="region" >Юго-западный район</column>
             <column name="federal_law" >228-Ф14</column>
         </insert>
     </changeSet>
