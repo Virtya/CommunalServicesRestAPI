@@ -15,7 +15,7 @@ import javax.persistence.*;
 public class Individual {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Long number;
 
     @NotNull
     private String fio;

@@ -31,7 +31,7 @@ public class ComServicesServiceContractImpl implements ComServicesServiceContrac
 
     @Override
     public Contract addContract(ContractModel contractModel) {
-        Individual individual = individualRepository.findById(contractModel.getNumber())
+        Individual individual = individualRepository.findByNumber(contractModel.getNumber())
                 .orElseThrow(()->new ResourceNotFoundException(
                         "The individual with number = "+contractModel.getNumber()+" does not exist." ));
         Contract contract = Contract.builder()
@@ -47,7 +47,7 @@ public class ComServicesServiceContractImpl implements ComServicesServiceContrac
     @Override
     public Contract updateContract(Long id, ContractModel contractModel) {
         Individual individual = individualRepository
-                .findById(contractModel.getNumber())
+                .findByNumber(contractModel.getNumber())
                 .orElseThrow(()->new ResourceNotFoundException(
                         "The individual with number = "+contractModel.getNumber()+" does not exist." ));
         Contract contract = contractRepository.findById(id).orElseThrow(()->new ResourceNotFoundException("The contract with id="+ id +" does not exist."));

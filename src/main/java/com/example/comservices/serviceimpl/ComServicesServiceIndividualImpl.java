@@ -17,7 +17,7 @@ public class ComServicesServiceIndividualImpl implements ComServicesServiceIndiv
 
     @Override
     public Individual getIndividualById(Long id) {
-        return individualRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException("The individual with id="+id +" does not exist."));
+        return individualRepository.findByNumber(id).orElseThrow(() -> new ResourceNotFoundException("The individual with id="+id +" does not exist."));
     }
 
     @Override
@@ -38,7 +38,7 @@ public class ComServicesServiceIndividualImpl implements ComServicesServiceIndiv
 
     @Override
     public Individual updateIndividual(Long id, IndividualModel individualModel) {
-        Individual individual = individualRepository.findById(id).orElseThrow(()->new ResourceNotFoundException(
+        Individual individual = individualRepository.findByNumber(id).orElseThrow(()->new ResourceNotFoundException(
                 "The individual with id="+ id +" does not exist."));
         individual.setFio(individualModel.getFio());
         individual.setGender(individualModel.getGender());

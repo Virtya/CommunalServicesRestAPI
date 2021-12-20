@@ -30,7 +30,7 @@ public class ComServicesServiceIndebtednessImpl implements ComServicesServiceInd
 
     @Override
     public Indebtedness addIndebtedness(IndebtednessModel indebtednessModel) {
-        Individual individual = individualRepository.findById(indebtednessModel.getNumber())
+        Individual individual = individualRepository.findByNumber(indebtednessModel.getNumber())
                 .orElseThrow(()->new ResourceNotFoundException(
                         "The individual with number = "+indebtednessModel.getNumber()+" does not exist." ));
         Indebtedness indebtedness =  Indebtedness.builder()
@@ -43,7 +43,7 @@ public class ComServicesServiceIndebtednessImpl implements ComServicesServiceInd
 
     @Override
     public Indebtedness updateIndebtedness(Long id, IndebtednessModel indebtednessModel) {
-        Individual individual = individualRepository.findById(indebtednessModel.getNumber())
+        Individual individual = individualRepository.findByNumber(indebtednessModel.getNumber())
                 .orElseThrow(()->new ResourceNotFoundException(
                         "The individual with number = "+indebtednessModel.getNumber()+" does not exist." ));
 

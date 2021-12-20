@@ -44,7 +44,7 @@
 
         <createTable tableName="contract">
 
-            <column name="contract_id" type="bigint" autoIncrement="true">
+            <column name="id" type="bigint" autoIncrement="true">
                 <constraints primaryKey="true" nullable="false" />
             </column>
 
